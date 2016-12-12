@@ -1,0 +1,237 @@
+@CHARSET "ISO-8859-1";
+/* http://www.alvarotrigo.com/fullPage/ */
+body,div,ul,ol,li,h1,h2 {
+    padding: 0;
+    margin: 0;
+}
+
+ol,ul,li {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+	text-align: center;
+	font-family: Adobe Garamond, serif;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+    color:#444; /*SKIN DEEP FONT COLOR*/
+    font-size: 100px;
+}
+
+p, h2 {
+	position: relative;
+	width: 700px;
+	margin: auto;
+	text-align: left;
+}
+
+.header h1 {
+    position: relative;
+	-webkit-transform: translateY(200%);
+	-ms-transform: translateY(200%);
+	transform: translateY(200%);
+}
+
+.about p {
+	font-size: 16px;
+	-webkit-transform: translateY(150%);
+	-ms-transform: translateY(150%);
+	transform: translateY(150%);
+}
+
+.credits p {
+	font-size: 16px;
+	-webkit-transform: translateY(450%);
+	-ms-transform: translateY(450%);
+	transform: translateY(450%);
+}
+
+.credits a {
+	font-size: 16px;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+
+body {
+	font-family: Franklin Gothic Book, sans-serif;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+
+a {
+	text-decoration:none;
+	color:#333;
+}
+
+.section{
+	text-align:center;
+}
+
+.section h1 {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.section li, a {
+	font-size: 24px;
+	position: relative;
+	top: 75%;
+	-webkit-transform: translateY(-75%);
+	-ms-transform: translateY(-75%);
+	transform: translateY(-75%);
+}
+
+.slide {
+	float:left;
+}
+
+.slide h2 {
+	font-size: 36px;
+	position: relative;
+	text-align: center;
+	top: 40%;
+	-webkit-transform: translateY(50%);
+	-ms-transform: translateY(50%);
+	transform: translateY(50%);
+}
+
+.rectangle {
+	position: relative;
+	width:18%;
+	height:30%;
+	margin:10px;
+	display:inline-block;
+	transition: all .2s ease-in-out;
+	transform: scale(1) rotateY(0);
+}
+
+.rectangle_front,
+.rectangle_back {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: inline-block;
+}
+
+.rectangle_front,
+.rectangle_back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden；
+}
+
+.rectangle_back {
+	background: #CECECE;
+	opacity: 0.5;
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.rectangle.effect_click.flipped .rectangle_front {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.rectangle.effect_click.flipped .rectangle_back {
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-o-transform: rotateY(0);
+	transform: rotateY(0);
+}
+
+.rectangle:hover {
+	transform: scale(1.05);
+}
+
+.opened, .opened:hover {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+	transform: rotateY(180deg) scale(1.05);
+}
+
+.opened .rectangle_front {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.opened .rectangle_back {
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-o-transform: rotateY(0);
+	transform:rotateY(0);
+}
+
+.rectangle:active {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+	transform: rotateY(180deg) scale(1.05);
+}
+
+.opened .rectangle_back p {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: relative;
+	opacity: 1;
+    color: white;
+    width:75%;
+	height:100%;
+	margin: auto;
+	display:inline-block;
+	text-align: left;
+	padding-top: 2em;
+}
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	text-decoration:none;
+}
+
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+
+#menu a {
+	font-size: 18px;
+}
+
+#menu li.active a{
+	color: #fff;
+}
+
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
