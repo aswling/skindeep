@@ -8,15 +8,17 @@ $(document).ready(function() {
 		$.fn.fullpage.moveSectionDown();
 	});
 
-	$('.rectangle').click(function() {
+	var blocks = $('.rectangle');
+
+	$(blocks).click(function() {
 		$('this').toggleClass("opened");
 	});
 
 	
-	$('.rectangle').each(function() {
+	$(blocks).each(function() {
 	});
 
-  	$('.rectangle').click(function() {
+  	$(blocks).click(function() {
 	  	var index = $(this).index();
 	  	if (currentTrack != -1) sounds[currentTrack].pause();
 	  	if (index != currentTrack && sounds[index].paused) {
@@ -47,8 +49,6 @@ $(document).ready(function() {
 		'#FFDB9D',
 		'#FEDEC7'
 	];
-
-	var blocks = $('.rectangle');
 	
 	for (var i = 0; i < blocks.length; i++) {
 		var color = colors[i % colors.length];
